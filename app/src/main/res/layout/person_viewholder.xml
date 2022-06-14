@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.example.roomdatabase.Person"/>
+        <variable
+            name="person"
+            type="com.example.roomdatabase.Person" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:padding="12dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="20"
+                android:text="@{`Person Name: `+ person.name}"
+                tools:text="Name : Himanshu  Gaur"
+                style="@style/TextAppearance.AppCompat.Title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Age : ` + String.valueOf(person.age)}"
+                tools:text="Age : 12"
+                style="@style/TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
