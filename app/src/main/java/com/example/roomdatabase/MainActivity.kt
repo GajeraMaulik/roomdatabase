@@ -47,24 +47,29 @@ class MainActivity : AppCompatActivity(),PersonAdapter.RowClickListener {
         /** handle the save button */
         save_data_button.setOnClickListener {
 
+             if (person_name.text.isEmpty() || person_age.text.isEmpty()) {
 
-
-             if (person_name.text.isEmpty() && person_age.text.isEmpty()) {
-
-                 Toast.makeText(this,"Empty Fields Please Enter name & age ",Toast.LENGTH_LONG).show()
+                 Toast.makeText(this,"Please Enter name & age ",Toast.LENGTH_LONG).show()
              }else{
 
                  if (save_data_button.text.equals("Save") ) {
                      val person = Person(0,name = person_name.text.toString(), age = person_age.text.toString().toInt())
+
                      Toast.makeText(this, "Add $person", Toast.LENGTH_LONG).show()
-                     viewModel.insert(person)
+
+                    viewModel.insert(person)
+
+
                      person_name.text.clear()
                      person_age.text.clear()
                  }else{
                      val person = Person( person_name.getTag(person_name.id).toString().toInt(),name = person_name.text.toString(), age = person_age.text.toString().toInt())
+
                      Toast.makeText(this,"Updated $person",Toast.LENGTH_LONG).show()
+
                      viewModel.update(person)
                      save_data_button.text = "Save"
+
                      person_name.text.clear()
                      person_age.text.clear()
                  }

@@ -10,15 +10,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         tools:context=".MainActivity">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/room_recycler"
             android:layout_width="match_parent"
-            tools:listitem="@layout/person_viewholder"
             android:layout_height="match_parent"
             android:layout_above="@+id/ll1"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/person_viewholder" />
 
 
         <LinearLayout
@@ -26,46 +27,337 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="#f2f2f2"
+            android:background="@color/white"
             android:orientation="vertical"
             android:padding="12dp">
 
+            <androidx.cardview.widget.CardView
 
-            <EditText
-                android:id="@+id/person_name"
+                android:id="@+id/item_Detail_View"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Person Name"
-                android:inputType="text"
-                android:maxLength="20"
-                android:maxLines="1"
-                android:textColor="@color/black" />
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/white"
 
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
 
-            <EditText
-                android:id="@+id/person_age"
+                <EditText
+                    android:id="@+id/person_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Person Name"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/item_Detail_View1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="Age"
-                android:inputType="number"
-                android:maxLength="10"
-                android:maxLines="1"
-                android:textColor="@color/black" />
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_65sdp"
 
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
 
+                <EditText
+                    android:id="@+id/person_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+          <!--  <androidx.cardview.widget.CardView
+
+                android:id="@+id/item_Detail_View2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/person_age1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/item_Detail_View11"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/person_age11"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/item_Detail_View12"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/person_age12"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/item_Detail_View13"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/person_age13"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/item_Detail_View131"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/person_age14"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/item_Detail_View1101"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/person_age111"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/item_Detail_View111"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/person_age1111"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/item_Detail_View123"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/person_age23"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/item_Detail_View21"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/person_age21"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/_15sdp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </androidx.cardview.widget.CardView>
+-->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/save_data_button"
                 android:layout_width="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:layout_height="55dp"
-                android:layout_marginTop="16dp"
+
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:shadowRadius="20"
                 android:text="Save"
                 android:textAllCaps="false" />
 
         </LinearLayout>
 
-       <!-- <com.google.android.material.button.MaterialButton
+<!--        <com.google.android.material.button.MaterialButton
             android:id="@+id/update_data_button"
             android:layout_width="wrap_content"
             android:layout_height="55dp"
